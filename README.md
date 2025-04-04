@@ -1,0 +1,1 @@
+This is a JSON jira importer example.  It was entirely created by "vibe-coding" with a conbo of Claude 3.7, chatGPT 4o and old-fashioned brain power. I would say it got 90% there, but the last 10% is annoying.
