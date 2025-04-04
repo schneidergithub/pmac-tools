@@ -1,0 +1,231 @@
+{
+  "epics": [
+    {
+      "summary": "Project Foundation and Bootstrap",
+      "description": "This epic covers the fundamental setup and structure definition for the PMAC project, including project bootstrap automation.",
+      "priority": "High",
+      "labels": ["foundation", "bootstrap"],
+      "component": "Core"
+    },
+    {
+      "summary": "Team and Collaboration",
+      "description": "This epic focuses on defining and implementing the hybrid human-AI collaboration model that is central to PMAC.",
+      "priority": "High",
+      "labels": ["collaboration", "ai"],
+      "component": "Core"
+    },
+    {
+      "summary": "Sprint and Task Management",
+      "description": "This epic covers the management of sprints, user stories, and their integration with testing frameworks.",
+      "priority": "High",
+      "labels": ["sprint", "task"],
+      "component": "Core"
+    },
+    {
+      "summary": "Self-Healing and Resilience",
+      "description": "This epic focuses on implementing self-healing mechanisms, drift detection, and resilience features.",
+      "priority": "High",
+      "labels": ["resilience", "self-healing"],
+      "component": "Core"
+    },
+    {
+      "summary": "Integration and Interoperability",
+      "description": "This epic covers integration with external tools, platforms, and protocols.",
+      "priority": "High",
+      "labels": ["integration", "interoperability"],
+      "component": "Integration"
+    },
+    {
+      "summary": "Governance and Compliance",
+      "description": "This epic addresses IAM, audit trails, and policy enforcement throughout the PMAC system.",
+      "priority": "High",
+      "labels": ["governance", "compliance"],
+      "component": "Security"
+    },
+    {
+      "summary": "Reusability and Templating",
+      "description": "This epic focuses on creating reusable templates and best practices encoding.",
+      "priority": "Medium",
+      "labels": ["reusability", "templates"],
+      "component": "Core"
+    }
+  ],
+  "stories": [
+    {
+      "summary": "Project Structure Definition",
+      "description": "As a project manager\nI want to define my project's structure in a declarative JSON/YAML format\nSo that I can establish a single source of truth for the entire project lifecycle\n\nAcceptance Criteria:\n- Create a `pmac.json` schema that includes:\n  - Project metadata (name, description, start date, version)\n  - Project objectives and success metrics\n  - Repository URLs and integration points\n  - Tags and compliance requirements\n- Validate the schema against a JSON Schema definition\n- Store the configuration in a Git repository",
+      "priority": "High",
+      "epicLink": "Project Foundation and Bootstrap",
+      "labels": ["foundation", "schema"],
+      "component": "Core"
+    },
+    {
+      "summary": "Team Structure and Roles Definition",
+      "description": "As a project leader\nI want to define my team structure with both human and AI members\nSo that responsibilities, escalation paths, and collaboration models are clearly defined\n\nAcceptance Criteria:\n- Define team members with attributes:\n  - ID, name, role, location/timezone\n  - Skills and capabilities\n  - Working hours and availability\n  - Trust level and SLAs\n- Support for both human and AI team members using the same schema\n- Define alternate/backup roles for critical positions\n- Include timezone awareness for distributed teams",
+      "priority": "High",
+      "epicLink": "Project Foundation and Bootstrap",
+      "labels": ["team", "roles"],
+      "component": "Core"
+    },
+    {
+      "summary": "Organizational Structure Definition",
+      "description": "As a project leader\nI want to define my organizational structure and reporting relationships\nSo that governance, approvals, and communications flow efficiently\n\nAcceptance Criteria:\n- Create org chart with departments and org units\n- Define reporting relationships between team members\n- Map team members to organizational roles\n- Support matrix organization structures",
+      "priority": "Medium",
+      "epicLink": "Project Foundation and Bootstrap",
+      "labels": ["organization", "governance"],
+      "component": "Core"
+    },
+    {
+      "summary": "Project Bootstrap Automation",
+      "description": "As a project initiator\nI want to bootstrap my entire project environment from the PMAC definition\nSo that all tools, repositories, and collaboration platforms are instantly configured\n\nAcceptance Criteria:\n- Create a bootstrap script that:\n  - Initializes Git repositories\n  - Creates Jira/Confluence projects and spaces\n  - Sets up Slack/Teams channels\n  - Configures initial CI/CD pipelines\n  - Establishes calendar invites for recurring meetings\n- Provide logging and error handling for bootstrap process\n- Support idempotent execution (can be run multiple times safely)",
+      "priority": "High",
+      "epicLink": "Project Foundation and Bootstrap",
+      "labels": ["automation", "bootstrap"],
+      "component": "Core"
+    },
+    {
+      "summary": "Sprint Definition and Planning",
+      "description": "As a scrum master/project manager\nI want to define sprints with associated user stories in code\nSo that work can be planned, tracked, and version-controlled alongside the project definition\n\nAcceptance Criteria:\n- Define sprint objects with:\n  - Name and duration\n  - Start and end dates\n  - Associated user stories and tasks\n  - Velocity points and capacity planning\n- Link sprints to team members based on skills and capacity\n- Support for automation in sprint planning",
+      "priority": "High",
+      "epicLink": "Sprint and Task Management",
+      "labels": ["sprint", "planning"],
+      "component": "Core"
+    },
+    {
+      "summary": "User StoryandTask Definition",
+      "description": "As a product owner\nI want to define user stories in a structured format\nSo that requirements are consistent, testable, and linked to project objectives\n\nAcceptance Criteria:\n- Define user stories with:\n  - ID, summary, and detailed description\n  - Assigned owner and collaborators\n  - Labels and priority levels\n  - Gherkin feature references\n  - Test references and validation criteria\n- Support for different executor types (human, AI, hybrid)\n- Include role flexibility and delegation options",
+      "priority": "High",
+      "epicLink": "Sprint and Task Management",
+      "labels": ["story", "task"],
+      "component": "Core"
+    },
+    {
+      "summary": "Gherkin Test Integration",
+      "description": "As a quality assurance engineer\nI want to link Gherkin feature files to user stories\nSo that acceptance criteria are executable and testable\n\nAcceptance Criteria:\n- Create Gherkin feature files that describe acceptance criteria\n- Link user stories to corresponding feature files\n- Develop test automation that validates stories against Gherkin features\n- Support for test-driven project management approach",
+      "priority": "Medium",
+      "epicLink": "Sprint and Task Management",
+      "labels": ["gherkin", "testing"],
+      "component": "Core"
+    },
+    {
+      "summary": "AI Team Member Definition",
+      "description": "As a project leader\nI want to define AI team members with specific capabilities and roles\nSo that they can contribute alongside human team members\n\nAcceptance Criteria:\n- Define AI team members with:\n  - Capabilities and allowed tasks\n  - Provider and model information\n  - Trust level and permission boundaries\n  - Fallback procedures\n- Specify interaction patterns with human team members\n- Define escalation paths when AI capabilities are exceeded",
+      "priority": "High",
+      "epicLink": "TeamandCollaboration",
+      "labels": ["ai", "team"],
+      "component": "Core"
+    },
+    {
+      "summary": "Role Substitution and Fallback",
+      "description": "As a project manager\nI want to define role substitution and fallback procedures\nSo that the project continues to function when team members are unavailable\n\nAcceptance Criteria:\n- Define alternate roles for each primary role\n- Create escalation policies for when tasks are blocked\n- Specify maximum response times before escalation\n- Support automatic reassignment based on predefined rules",
+      "priority": "High",
+      "epicLink": "Team and Collaboration",
+      "labels": ["fallback", "escalation"],
+      "component": "Core"
+    },
+    {
+      "summary": "AI Enhancement for Project Tasks",
+      "description": "As a team member\nI want to leverage AI for enhancement of project artifacts\nSo that documentation, stories, and plans are automatically improved\n\nAcceptance Criteria:\n- Define AI enhancement workflows for:\n  - Story refinement and clarification\n  - Documentation generation and updates\n  - Test case suggestions\n  - Retrospective insights\n- Implement hooks for AI to provide suggestions as pull requests\n- Ensure human review and approval of AI enhancements",
+      "priority": "Medium",
+      "epicLink": "Team and Collaboration",
+      "labels": ["ai", "enhancement"],
+      "component": "Core"
+    },
+    {
+      "summary": "Drift Detection Implementation",
+      "description": "As a project manager\nI want to detect drift between planned and actual project state\nSo that corrective actions can be taken before issues escalate\n\nAcceptance Criteria:\n- Define desired state in PMAC configuration\n- Implement state tracking mechanisms\n- Create automated checks that compare actual vs. desired state\n- Generate alerts and reports when drift exceeds thresholds",
+      "priority": "High",
+      "epicLink": "Self-Healing and Resilience",
+      "labels": ["drift", "monitoring"],
+      "component": "Core"
+    },
+    {
+      "summary": "Self-Healing Automation",
+      "description": "As a project manager\nI want to implement self-healing mechanisms for common issues\nSo that the project can recover automatically from routine problems\n\nAcceptance Criteria:\n- Define playbooks for common issues (team member absence, task delays)\n- Implement automated recovery procedures\n- Track healing actions in state logs\n- Provide notification of self-healing activities",
+      "priority": "High",
+      "epicLink": "Self-Healing and Resilience",
+      "labels": ["automation", "healing"],
+      "component": "Core"
+    },
+    {
+      "summary": "Emergency Response Automation",
+      "description": "As a project leader\nI want to automate emergency responses to critical issues\nSo that the project can continue functioning during unexpected events\n\nAcceptance Criteria:\n- Define emergency response playbooks\n- Create automated triggers for emergency procedures\n- Support for emergency sprint creation\n- Implement role reassignment during emergencies",
+      "priority": "Medium",
+      "epicLink": "Self-Healing and Resilience",
+      "labels": ["emergency", "automation"],
+      "component": "Core"
+    },
+    {
+      "summary": "Tool Integration Framework",
+      "description": "As a DevOps engineer\nI want to integrate PMAC with existing project tools\nSo that information flows seamlessly between systems\n\nAcceptance Criteria:\n- Create integration points for:\n  - Jira/Confluence\n  - GitHub/GitLab\n  - Slack/Teams\n  - Calendar systems\n- Implement bidirectional synchronization\n- Support webhook triggers for events",
+      "priority": "High",
+      "epicLink": "Integration and Interoperability",
+      "labels": ["integration", "tools"],
+      "component": "Integration"
+    },
+    {
+      "summary": "CI/CD Pipeline Integration",
+      "description": "As a DevOps engineer\nI want to integrate PMAC with CI/CD pipelines\nSo that project governance is enforced throughout the development lifecycle\n\nAcceptance Criteria:\n- Create CI/CD templates that enforce PMAC policies\n- Implement validation of changes against PMAC definitions\n- Support automated deployment of project artifacts\n- Track CI/CD metrics in project state",
+      "priority": "High",
+      "epicLink": "Integration and Interoperability",
+      "labels": ["cicd", "pipeline"],
+      "component": "Integration"
+    },
+    {
+      "summary": "MCP Integration",
+      "description": "As an AI engineer\nI want to integrate PMAC with the Model Context Protocol\nSo that AI agents have structured context for project tasks\n\nAcceptance Criteria:\n- Implement MCP-compatible context generation\n- Create structured context for AI agents based on PMAC definition\n- Support context updates as project state changes\n- Track AI agent actions within the project context",
+      "priority": "Medium",
+      "epicLink": "Integration and Interoperability",
+      "labels": ["mcp", "ai"],
+      "component": "Integration"
+    },
+    {
+      "summary": "IAM and Access Control Implementation",
+      "description": "As a security officer\nI want to implement IAM declarations in PMAC\nSo that access control is consistently applied across the project\n\nAcceptance Criteria:\n- Define IAM roles and permissions in PMAC\n- Map team members to IAM roles\n- Generate IAM policies for various tools and platforms\n- Track and audit permission changes",
+      "priority": "High",
+      "epicLink": "Governance and Compliance",
+      "labels": ["iam", "security"],
+      "component": "Security"
+    },
+    {
+      "summary": "Audit Trail Implementation",
+      "description": "As a compliance officer\nI want to maintain a comprehensive audit trail of project activities\nSo that we can demonstrate compliance with policies and regulations\n\nAcceptance Criteria:\n- Track all changes to PMAC definitions in Git history\n- Log all automated actions and state changes\n- Create audit reports for compliance reviews\n- Implement tamper-evident logging",
+      "priority": "High",
+      "epicLink": "Governance and Compliance",
+      "labels": ["audit", "compliance"],
+      "component": "Security"
+    },
+    {
+      "summary": "Policy Enforcement Automation",
+      "description": "As a governance manager\nI want to automate policy enforcement throughout the project\nSo that compliance is maintained without manual oversight\n\nAcceptance Criteria:\n- Define policies in machine-readable format\n- Implement automated policy checks in workflows\n- Block non-compliant actions with explanatory feedback\n- Generate compliance reports automatically",
+      "priority": "Medium",
+      "epicLink": "Governance and Compliance",
+      "labels": ["policy", "automation"],
+      "component": "Security"
+    },
+    {
+      "summary": "Project Template Creation",
+      "description": "As a project office manager\nI want to create reusable project templates\nSo that successful patterns can be easily replicated\n\nAcceptance Criteria:\n- Extract common patterns into template format\n- Support parameterization of templates\n- Implement template instantiation with custom values\n- Include documentation on template usage",
+      "priority": "Medium",
+      "epicLink": "Reusability and Templating",
+      "labels": ["template", "reuse"],
+      "component": "Core"
+    },
+    {
+      "summary": "Global Registry for Templates",
+      "description": "As a project manager\nI want to publish and discover PMAC templates in a global registry\nSo that teams can leverage best practices from across the community\n\nAcceptance Criteria:\n- Implement a registry for storing and discovering templates\n- Support versioning and categorization of templates\n- Include rating and feedback mechanisms\n- Provide easy import of templates into new projects",
+      "priority": "Low",
+      "epicLink": "Reusability and Templating",
+      "labels": ["registry", "community"],
+      "component": "Core"
+    },
+    {
+      "summary": "Best Practice Encoding",
+      "description": "As a project management expert\nI want to encode best practices into PMAC templates\nSo that teams can benefit from established methodologies\n\nAcceptance Criteria:\n- Create templates for common methodologies (Scrum, Kanban, SAFe)\n- Include documented rationales for practices\n- Support customization of practices for specific needs\n- Provide validation of compliance with methodology standards",
+      "priority": "Low",
+      "epicLink": "Reusability and Templating",
+      "labels": ["best-practice", "methodology"],
+      "component": "Core"
+    }
+  ]
+}
